@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -43,5 +44,48 @@
             <a href="#"><img src="Assets/Usuario.svg" alt="Usuario" class="container__imagem"></a>
         </div>
     </header>
+    <section class="banner">
+        <h2 class="banner__titulo">Já sabe por onde começar?</h2>
+        <p class="banner__texto">Encontre em nossa estante o que precisa para seu desenvolvimento!</p>
+        <input type="search" class="banner__pesquisa" placeholder="Qual será sua próxima leitura?">
+    </section>
+    <section class="carrosel">
+        <h2 class="carrosel__titulo">Novos Lançamentos</h2>
+        <!-- Slider main container -->
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-container">
+            <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="Assets/ApacheKafka.svg" alt="Livro sobre apache kraft"></div>
+        <div class="swiper-slide"><img src="Assets/Liderança.svg" alt="Livro sobre liderança"></div>
+        <div class="swiper-slide"><img src="Assets/Javascript.svg" alt="Livro sobre javascript"></div>
+        <div class="swiper-slide"><img src="Assets/Guia Front-end.svg" alt="Livro Guia Front-end"></div>
+        <div class="swiper-slide"><img src="Assets/Portugol.svg" alt="Guia Logica Portugol"></div>
+        <div class="swiper-slide"><img src="Assets/Tuning.svg" alt="Livro Turning SQL"></div>
+    </div>
+    
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    
+    </div>
+    </section>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <script>
+        const swiper = new Swiper('.swiper-container', {
+  spaceBetween: 10,
+  slidesPerView: 3,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+});
+    </script>
 </body>
 </html>
